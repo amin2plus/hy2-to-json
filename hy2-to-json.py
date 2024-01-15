@@ -125,21 +125,15 @@ def generate_json(input_link):
                     "inbound": ["dns-in"],
                     "outbound": "dns-out"
                 },
-                {
-                    "geosite": ["category-ads-all"],
-                    "outbound": "block"
-                },
-                {
-                    "domain_suffix": ".ir",
-                    "geoip": "ir",
-                    "outbound": "bypass"
-                },
-                {
-                    "domain_suffix": ".cn",
-                    "geosite": "cn",
-                    "geoip": "cn",
-                    "outbound": "bypass"
-                },
+                 {
+                  "domain_suffix": ".ir",
+                  "geoip": [
+                     "ir",
+                     "cn",
+                     "private"
+                  ],
+                  "outbound": "bypass"
+                  },
                 {
                     "ip_cidr": ["224.0.0.0/3", "ff00::/8"],
                     "outbound": "block",
