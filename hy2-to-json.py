@@ -125,15 +125,15 @@ def generate_json(input_link):
                     "inbound": ["dns-in"],
                     "outbound": "dns-out"
                 },
-                 {
+                {
                   "domain_suffix": ".ir",
                   "geoip": [
-                     "ir",
-                     "cn",
-                     "private"
+                    "ir",
+                    "cn",
+                    "private"
                   ],
                   "outbound": "bypass"
-                  },
+                },
                 {
                     "ip_cidr": ["224.0.0.0/3", "ff00::/8"],
                     "outbound": "block",
@@ -150,5 +150,5 @@ def generate_json(input_link):
     print(f"Output JSON file '{output_filename}' created successfully.")
 
 # for usage please put your link down here
-input_link = "hy2://pass@ip:port?insecure=1&sni=www.sni.com#name"
+input_link = "hy2://pass@ip:port?insecure=1&sni=www.sni.com#confname"
 generate_json(input_link)
